@@ -67,7 +67,8 @@
                 }
               }
               foreach ($topLevel as $id => $menuItem) {
-                $topLevel[$id]['sub'] = array_chunk($menuItem['sub'], 4);
+                $section = ceil(count($menuItem['sub']) / 4);
+                $topLevel[$id]['sub'] = array_chunk($menuItem['sub'], $section);
               }
             ?>
 
