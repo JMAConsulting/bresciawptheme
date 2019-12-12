@@ -1008,7 +1008,7 @@ ul.footList li {
     margin-bottom:5px;
 }
 
-ul.footList li a:before {
+/* ul.footList li a:before {
     display:inline-block;
     content:'';
     background-image: url(img/chev-1.svg);
@@ -1017,8 +1017,11 @@ ul.footList li a:before {
     background-position: center center;
     width: 1em;
     height: 0.5em;
-}
+} */
 
+ul#menu-footer-menu-1 .dropdown-item {
+  padding: 0px;
+}
 
 ul.footList li a {
     color:#164397;

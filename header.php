@@ -146,7 +146,7 @@
                       <button type="submit" tabindex="-1" class="d-inline-block d-lg-none"><span class="sr-only">Submit Search</span></button>
                     </div>
                   </form> -->
-                  <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>" class="mainSearch" aria-label="Site Search" aria-hidden="true">
+                  <form role="search" method="get" id="searchform" action="http://brescia.uwo.ca" class="mainSearch" aria-label="Site Search" aria-hidden="true">
                     <div class="form-group">
                       <label for="sitesearch">Site Search</label>
                       <input id="sitesearch" type="search" Title="search" name="s" value=" <?php echo get_search_query(); ?>" class="form-control" tabindex="-1">
@@ -155,7 +155,7 @@
                   </form>
                 </li>
                 <li>
-                  <a href="https://brescia.uwo.ca/give">Give</a>
+                  <a href="http://brescia.uwo.ca/give">Give</a>
                 </li>
                 <li>
                   <button class="dropdown-toggle" id="resourceBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
