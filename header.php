@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Directory Detail | Brescia</title>
+  <title><?php echo single_post_title(); ?> | Brescia</title>
   <meta name="description" content="brescia">
   <meta name="author" content="brescia">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon-16x16.png">
   <meta name="msapplication-TileColor" content="#faa21b">
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -42,7 +40,7 @@
     </li>
   </ul>
 
-  <header class="navbar navbar-expand-lg fixed-top mainHeader">
+  <header class="navbar navbar-expand-lg fixed-top mainHeader" id="masthead">
     <div class="contentWidth">
       <span class="navbar-brand mainLogo"><a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brescia_logo.svg" alt="brescia university college" width="251" height="91"></a></span>
       <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#mainNavs" aria-controls="mainNavs" aria-expanded="false" aria-label="Toggle Site Navigations">
@@ -172,17 +170,12 @@
     </div><!--contentWidth-->
   </header>
 
-
-
-
-
-
-
-
-
-
-
-  <div class="container">
+    <div class="home-hero heroSection wTxt" id="mainHeroContent">
+        <div class="row no-gutters">
+            <div class="col-12 inner"><?php the_post_thumbnail( 'single-post-thumbnail' ); ?></div>
+        </div>
+    </div>
+    <div class="container">
     <div class="row breadRow justify-content-center d-none d-md-flex">	<!-- OUnote: justify class changed to center for pages with no LSB -->
       <div class="col-12 col-lg-9">
         <nav aria-label="Breadcrumb">

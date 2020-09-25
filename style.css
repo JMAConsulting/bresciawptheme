@@ -3586,6 +3586,113 @@ body.tabbing a.viewAll:focus, body.tabbing .mainHeader *:focus, body.tabbing .ma
 
 }
 
+/* Hero Section */
+
+.home-hero.heroSection.wTxt {
+    background-color: #fff;
+}
+
+.heroSection {
+    position: relative;
+    z-index: 0;
+    background-color: #f4f4f4;
+}
+
+@media (min-width: 992px) {
+    .home-hero.heroSection .inner {
+        display: flex;
+        min-height: 380px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .heroSection.wTxt .inner {
+        overflow: hidden;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .heroSection.wTxt .inner {
+        max-height: 95vh;
+        overflow: hidden;
+        z-index: 0;
+        max-width: none;
+        min-width: 72vh;
+    }
+
+    .heroSection .inner {
+        max-height: 95vh;
+        overflow: hidden;
+        z-index: 0;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    .no-gutters > .col, .no-gutters > [class*=col-] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1500px) {
+    .home-hero.heroSection img, .home-hero.heroSection.wTxt img {
+        top: -10%;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-hero.heroSection.wTxt img, .home-hero.heroSection img {
+        max-width: 100%;
+        min-height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .heroSection.wTxt img {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        position: absolute;
+        max-width: none;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .heroSection.wTxt img {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        position: absolute;
+        max-width: none;
+        top: 0;
+        left: 0;
+    }
+
+    .heroSection.wTxt img {
+        width: 100%;
+    }
+
+    .heroSection img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .home-hero.heroSection .inner {
+        min-height: 540px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .home-hero.heroSection .inner {
+        min-height: 500px;
+    }
+}
 
 
 
