@@ -1271,6 +1271,42 @@ ul.social a:hover, ul.social a:focus {
     margin-bottom:2rem
 }
 
+/* CiviCRM buttons */
+
+.crm-button i {
+    display: none;
+}
+
+span.crm-button {
+    background: none !important;
+    border: none !important;
+    text-shadow: 0 0px 0 black !important;
+}
+
+input.crm-form-submit {
+    color: #164397 !important;
+    background-color: #fff !important;
+    font-size: 1.1875rem !important;
+    font-weight: 700 !important;
+    border-radius: 1.5rem !important;
+    padding: 0.5rem 1.2rem !important;
+    border: 2px solid #164397 !important;
+    text-shadow: 0 0px 0 black !important;
+}
+
+input.crm-form-submit:hover {
+    color: #fff !important;
+    background-color: #164397 !important;
+    border: 2px solid #fff !important;
+}
+
+#crm-submit-buttons {
+    padding-bottom: 40px !important;
+}
+
+
+/* CiviCRM buttons */
+
 /*========homeIntro circle links============ */
 
 .homeIntro ul.circLinks {}

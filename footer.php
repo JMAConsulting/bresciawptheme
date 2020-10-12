@@ -21,7 +21,7 @@
           <li><a href="#">Accessibility</a></li>
           <li><a href="#">Communications</a></li>
         </ul> -->
-        <?php wp_nav_menu( array( 'menu' => 'Resources', 'container' => '', 'menu_class' => 'footList') ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => '', 'menu_class' => 'footList') ); ?>
 
       </div>
 
@@ -32,32 +32,32 @@
         <ul class="social footSocial list-inline">
 
           <li class="in list-inline-item">
-            <a href="http://www.google.com">
+            <a href="https://www.youtube.com/channel/UCOagzXAztDvCa9pPUGCoO0g">
               <span class="brescicon-youtube" aria-hidden="true"></span>
               <span class="sr-only">YouTube</span>
             </a>
           </li>
           <li class="fb list-inline-item">
-            <a href="http://www.google.com">
+            <a href="https://www.facebook.com/BresciaUniversityCollege">
               <span class="brescicon-fb" aria-hidden="true"></span>
               <span class="sr-only">Facebook</span>
             </a>
           </li>
           <li class="tw list-inline-item">
-            <a href="http://www.google.com">
+            <a href="https://twitter.com/BresciaUC">
               <span class="brescicon-twitter" aria-hidden="true"></span>
               <span class="sr-only">Twitter</span>
             </a>
           </li>
 
           <li class="ig list-inline-item">
-            <a href="http://www.google.com">
+            <a href="https://www.instagram.com/bresciauc/">
               <span class="brescicon-instagram" aria-hidden="true"></span>
               <span class="sr-only">Instagram</span>
             </a>
           </li>
           <li class="in list-inline-item">
-            <a href="http://www.google.com">
+            <a href="https://www.linkedin.com/school/brescia-university-college/">
               <span class="brescicon-linkedin" aria-hidden="true"></span>
               <span class="sr-only">LinkedIn</span>
             </a>
@@ -71,13 +71,12 @@
     <div class="row copyright">
 
       <div class="col-6">
-        <a href="#" class="copylink">&copy;</a>2019 Brescia University College
+        <a href="#" class="copylink">&copy;</a>2020 Brescia University College
       </div>
 
       <div class="col-6 text-right">
         <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+          <li class="list-inline-item"><a href="https://brescia.uwo.ca/privacy_policy.php">Privacy Policy</a></li>
         </ul>
       </div>
 

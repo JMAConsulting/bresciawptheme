@@ -42,7 +42,7 @@
 
   <header class="navbar navbar-expand-lg fixed-top mainHeader" id="masthead">
     <div class="contentWidth">
-      <span class="navbar-brand mainLogo"><a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brescia_logo.svg" alt="brescia university college" width="251" height="91"></a></span>
+      <span class="navbar-brand mainLogo"><a href="https://brescia.uwo.ca"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brescia_logo.svg" alt="brescia university college" width="251" height="91"></a></span>
       <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#mainNavs" aria-controls="mainNavs" aria-expanded="false" aria-label="Toggle Site Navigations">
         <span class="icon-bar b1"></span>  <span class="icon-bar b2"></span>  <span class="icon-bar b3"></span>
       </button>
@@ -50,8 +50,8 @@
       <div class="navbar-collapse offcanvas-collapse" id="mainNavs">
         <nav aria-label="Main Site Navigation" class="ml-auto" id="mainNav">
             <?php $locations = get_nav_menu_locations();
-              if ( isset( $locations['primary']) ) {
-                $menu = get_term( $locations['primary'], 'nav_menu');
+              if ( isset( $locations['main-menu']) ) {
+                $menu = get_term( $locations['main-menu'], 'nav_menu');
                 if ( $items = wp_get_nav_menu_items( $menu->name ) ) {
                   foreach ( $items as $item ) {
                     if ($item->menu_item_parent == 0) {
@@ -127,7 +127,7 @@
         <div class="tertMenu">
           <div class="contentWidth">
             <nav aria-label="tertiary navigation" id="tertMenu" class="tertNav">
-              <?php wp_nav_menu( array( 'menu' => 'Tertiary menu', 'container' => '', ) ); ?>
+              <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', ) );?>
             </nav>
 
 
@@ -144,10 +144,10 @@
                       <button type="submit" tabindex="-1" class="d-inline-block d-lg-none"><span class="sr-only">Submit Search</span></button>
                     </div>
                   </form> -->
-                  <form role="search" method="get" id="searchform" action="http://brescia.uwo.ca" class="mainSearch" aria-label="Site Search" aria-hidden="true">
+                  <form role="search" method="get" id="searchform" action="https://brescia.uwo.ca/search/index.php" class="mainSearch" aria-label="Site Search" aria-hidden="true">
                     <div class="form-group">
                       <label for="sitesearch">Site Search</label>
-                      <input id="sitesearch" type="search" Title="search" name="s" value=" <?php echo get_search_query(); ?>" class="form-control" tabindex="-1">
+                      <input id="sitesearch" type="search" Title="search" name="q" value=" <?php echo get_search_query(); ?>" class="form-control" tabindex="-1">
                       <button type="submit" id="searchsubmit" tabindex="-1" class="d-inline-block d-lg-none" value="<?php esc_attr__('Search'); ?>"><span class="sr-only">Submit Search</span></button>
                     </div>
                   </form>
@@ -159,7 +159,7 @@
                   <button class="dropdown-toggle" id="resourceBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Resources
                   </button>
-                  <?php wp_nav_menu( array( 'menu' => 'Resources (Header)', 'container' => '', 'menu_class' => 'dropdown-menu') ); ?>
+                  <?php wp_nav_menu( array( 'theme_location' => 'tertiary-menu', 'container' => '', 'menu_class' => 'dropdown-menu') ); ?>
                 </li>
 
               </ul>
@@ -176,17 +176,20 @@
         </div>
     </div>
     <div class="container">
-    <div class="row breadRow justify-content-center d-none d-md-flex">	<!-- OUnote: justify class changed to center for pages with no LSB -->
+        <?php if(function_exists('bcn_display')) {
+    echo '<div class="row breadRow justify-content-center d-none d-md-flex">	
+    <!-- OUnote: justify class changed to center for pages with no LSB -->
       <div class="col-12 col-lg-9">
         <nav aria-label="Breadcrumb">
           <ol class="breadcrumb">
-          <?php if(function_exists('bcn_display'))
+          <?php if(function_exists(\'bcn_display\'))
           {
             bcn_display();
           }?>
           </ol>
         </nav>
       </div>
-    </div>
+    </div>';
+    }?>
 
     <main class="row justify-content-center" id="mainContent">	<!-- OUnote: justify class added for pages with no LSB -->

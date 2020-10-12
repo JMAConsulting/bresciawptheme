@@ -35,20 +35,29 @@
   add_filter( 'the_content', 'disable_wp_auto_p', 0 );
 
   function wpbsearchform( $form ) {
+    do_action( 'get_search_form' );
  
-    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <div><label class="screen-reader-text" for="s">' . __('Search for:') . '</label>
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-    <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
-    </div>
-    </form>';
-    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" class="mainSearch" aria-label="Site Search" aria-hidden="true">
+    $form = '<form role="search" method="get" id="searchform" action="' . home_url() . '" class="mainSearch" aria-label="Site Search" aria-hidden="true">
                <div class="form-group">
                  <label for="sitesearch">Site Search</label>
                  <input id="sitesearch" type="search" Title="search" value="' . get_search_query() . '" class="form-control" tabindex="-1">
                  <button type="submit" id="searchsubmit" tabindex="-1" class="d-inline-block d-lg-none" value="'. esc_attr__('Search') .'"><span class="sr-only">Submit Search</span></button>
                </div>
              </form>';
- 
-    return $form;
+             
+    echo apply_filters('get_search_form', $form);
+    //return $form;
 }
+
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'main-menu' => __( 'Main Menu' ),
+      'header-menu' => __( 'Header Menu' ),
+      'tertiary-menu' => __( 'Tertiary Menu' ),
+      'footer-menu' => __( 'Footer Menu' ),
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
