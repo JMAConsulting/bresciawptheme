@@ -1008,7 +1008,7 @@ ul.footList li {
     margin-bottom:5px;
 }
 
-/* ul.footList li a:before {
+ul.footList li a:before {
     display:inline-block;
     content:'';
     background-image: url(img/chev-1.svg);
@@ -1017,7 +1017,7 @@ ul.footList li {
     background-position: center center;
     width: 1em;
     height: 0.5em;
-} */
+}
 
 ul#menu-footer-menu-1 .dropdown-item {
   padding: 0px;
@@ -1277,13 +1277,13 @@ ul.social a:hover, ul.social a:focus {
     display: none;
 }
 
-span.crm-button {
+span.crm-button, a.cancel, a.button {
     background: none !important;
     border: none !important;
     text-shadow: 0 0px 0 black !important;
 }
 
-input.crm-form-submit {
+input.crm-form-submit, a.cancel, a.button {
     color: #164397 !important;
     background-color: #fff !important;
     font-size: 1.1875rem !important;
@@ -1294,7 +1294,7 @@ input.crm-form-submit {
     text-shadow: 0 0px 0 black !important;
 }
 
-input.crm-form-submit:hover {
+input.crm-form-submit:hover, a.cancel:hover, a.button:hover {
     color: #fff !important;
     background-color: #164397 !important;
     border: 2px solid #fff !important;
@@ -1302,6 +1302,10 @@ input.crm-form-submit:hover {
 
 #crm-submit-buttons {
     padding-bottom: 40px !important;
+}
+
+.crm-container a.button, .crm-container a.button:link, .crm-container a.button:visited {
+    line-height: 115% !important;
 }
 
 
